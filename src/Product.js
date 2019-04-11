@@ -8,7 +8,7 @@ class Product extends React.Component {
     this.i = 0;
   }
 
-  addToCart(){
+  /*addToCart(){
     this.i +=  1;
     if (this.i  >  this.props.stock) {
       alert("There are too many "+ this.props.name+" in your cart!")
@@ -16,8 +16,7 @@ class Product extends React.Component {
     } else {
       alert("There are " + this.i + " " + this.props.name+" in your cart!")
     }
-  }
-
+  }*/
   render() {
     return (
         <div className="page-content">
@@ -29,9 +28,13 @@ class Product extends React.Component {
                 Price: ${this.props.price}
               </div>
             </div>
-          <div class="ui bottom attached button" onClick={()=>this.addToCart()}>
+          <div class="ui bottom attached button" onClick={() => this.props.addToCart(this.props.name, this.props.price)}>
         <i class="add icon"></i>
         Add to Cart
+      </div>
+      <div class="ui bottom attached button" onClick={() => this.props.removeFromCart(this.props.name)}>
+        <i class="remove icon"></i>
+        Remove from Cart
       </div>
     </div>
 </div>

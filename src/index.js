@@ -8,4 +8,4 @@ import ProductData from "./Data";
 
 // Add the Cart component to the `#root` element below!
 const rootElement = document.getElementById("root");
-ReactDOM.render(<Cart name= {"apple"} price= {2} />, rootElement);
+ReactDOM.render(<Cart />, rootElement);
